@@ -25,3 +25,9 @@ jobs:
   trigger: commit
   metadata:
     targets: fedora-stable
+- job: tests
+  trigger: pull_request
+  targets: [fedora-stable]
+- job: tests
+  trigger: commit
+  targets: [fedora-stable]
